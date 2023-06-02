@@ -1,0 +1,72 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{natbib}
+\usepackage[french]{babel}
+\usepackage{fancyhdr}
+\usepackage{dirtytalk}
+\usepackage{subfiles}
+\usepackage{mathptmx}
+\graphicspath{{images/}}
+\begin{document}
+    \subfile{subfiles/cover-page}
+
+    \addcontentsline{toc}{chapter}{Épigraphe}
+    \chapter*{Épigraphe}\label{cha:epigraphe}
+
+    \addcontentsline{toc}{chapter}{Dédicace}
+    \chapter*{Dédicace}\label{cha:dedicace}
+
+    \addcontentsline{toc}{chapter}{Remerciements}
+    \chapter*{Remerciements}\label{cha:remerciements}
+
+    \addcontentsline{toc}{chapter}{Introduction générale}
+    \chapter*{Introduction générale}\label{cha:introduction-generale}
+    \subfile{subfiles/introduction.tex}
+
+    \tableofcontents
+
+    \chapter{Étude préalable}\label{cha:etude-prealable}  
+
+    \subsection{Étude de l'existant}\label{subsec:etude-de-l-existant}
+    \subfile{subfiles/existing}
+  
+    \newpage
+    \subsection{Présentation de l’entreprise}\label{subsec:presentation-de-l-entreprise}
+    \subfile{subfiles/entreprise}
+    
+    
+    \subsection{Objectifs et vision de l’entreprise}\label{subsec:objectifs-et-vision-de-l-entreprise}
+    \subfile{subfiles/goal-vision}
+    
+   	\subsection{Solution informatique}\label{subsec:solution-informatique}
+    \paragraph{}
+    La solution proposée est un logiciel dit applicatif, spécifique et propriétaire
+    car étant en rapport avec une tâche
+    particulière ici qui est la délibération des étudiants, 
+    étant destinée à résoudre la dite tâche au sein de l'UNH\footnote{Université Nouveaux Horizons} et
+    tous les droits sont réservés.
+
+   	\chapter{Analyse}\label{cha:analyse}
+    \subsection{Introduction}\label{subsec:introduction}
+    \subsection{Diagramme des classes}\label{subsec:diagramme-des-classes-de-l-application}
+    \subsection{Diagramme d'objets}\label{subsec:diagramme-des-objets-de-l-application}
+    \subsection{Diagramme de cas d’utilisation}\label{subsec:diagramme-de-cas-d-utilisation}
+   	\subsection{Diagramme de séquence}\label{subsec:diagramme-de-sequence}
+    \subsection{Diagramme d’activités}\label{subsec:diagramme-d-activites}
+    
+    \chapter{Conception}\label{sec:conception}
+    \subsection{Conception du système}\label{subsec:conception-du-systeme}
+    \subsection{Architecture du système}\label{subsec:architecture-du-systeme}
+    \subsection{Mise au point du plan de réutilisation}\label{subsec:mise-au-point-du-plan-de-reutilisation}
+    \subsection{Conception des classes système}\label{subsec:conception-des-classes-systeme}
+    
+    \chapter{Implémentation}\label{sec:implementation}
+    \subsection{Introduction}\label{subsec:introduction-implementation}
+   	\subsection{Choix des outils}\label{subsec:choix-des-outils}
+   	\subsection{Présentation des résultats}\label{subsec:presentation-des-resultats}
+   	
+    \chapter{Conclusion}\label{sec:conclusion}
+    \chapter{Bibliographie}\label{sec:bibliographie}
+\end{document}
