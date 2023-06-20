@@ -10,63 +10,69 @@
 \usepackage{mathptmx}
 \graphicspath{{images/}}
 \begin{document}
-    \subfile{subfiles/cover-page}
+    \subfile{files/cover/cover-page}
 
-    \addcontentsline{toc}{chapter}{Épigraphe}
-    \chapter*{Épigraphe}\label{cha:epigraphe}
+    \addcontentsline{toc}{chapter}{Résumé}
+    \chapter*{\uppercase{\large{\textmd{Résumé}} \vspace{0.6cm} \hrule}}\label{cha:resume}
 
-    \addcontentsline{toc}{chapter}{Dédicace}
-    \chapter*{Dédicace}\label{cha:dedicace}
+    \addcontentsline{toc}{chapter}{Abstract}
+    \chapter*{\uppercase{\large{\textmd{Abstract}} \vspace{0.6cm} \hrule}}\label{cha:abstract}
 
-    \addcontentsline{toc}{chapter}{Remerciements}
-    \chapter*{Remerciements}\label{cha:remerciements}
+    \addcontentsline{toc}{chapter}{Rémerciements}
+    \chapter*{\uppercase{\large{\textmd{Rémerciements}} \vspace{0.6cm} \hrule}}\label{cha:remerciements}
+    
+
+    \renewcommand*\contentsname{\uppercase{\large{\textmd{Table des matières}}} \vspace{0.5cm} \hrule }
+    \tableofcontents
 
     \addcontentsline{toc}{chapter}{Introduction générale}
     \chapter*{Introduction générale}\label{cha:introduction-generale}
-    \subfile{subfiles/introduction.tex}
+    \subfile{files/introduction/general-introduction}
 
-    \tableofcontents
+    \section{Contexte et motivation}\label{subsec:contexte-et-motivation}
+    \subfile{files/introduction/context-and-motivation.tex}
 
-    \chapter{Étude préalable}\label{cha:etude-prealable}  
+    \section{Problématique}\label{sec:problematique}
+    \subfile{files/introduction/problematic.tex}
 
-    \subsection{Étude de l'existant}\label{subsec:etude-de-l-existant}
-    \subfile{subfiles/existing}
-  
-    \newpage
-    \subsection{Présentation de l’entreprise}\label{subsec:presentation-de-l-entreprise}
-    \subfile{subfiles/entreprise}
-    
-    
-    \subsection{Objectifs et vision de l’entreprise}\label{subsec:objectifs-et-vision-de-l-entreprise}
-    \subfile{subfiles/goal-vision}
-    
-   	\subsection{Solution informatique}\label{subsec:solution-informatique}
-    \paragraph{}
-    La solution proposée est un logiciel dit applicatif, spécifique et propriétaire
-    car étant en rapport avec une tâche
-    particulière ici qui est la délibération des étudiants, 
-    étant destinée à résoudre la dite tâche au sein de l'UNH\footnote{Université Nouveaux Horizons} et
-    tous les droits sont réservés.
+    \section{Etat de la question}\label{sec:etat-de-l-art}
+    \section{Objectifs}\label{sec:objectifs}
+    \section{Méthodes et techniques}\label{sec:methode}
 
-   	\chapter{Analyse}\label{cha:analyse}
-    \subsection{Introduction}\label{subsec:introduction}
-    \subsection{Diagramme des classes}\label{subsec:diagramme-des-classes-de-l-application}
-    \subsection{Diagramme d'objets}\label{subsec:diagramme-des-objets-de-l-application}
-    \subsection{Diagramme de cas d’utilisation}\label{subsec:diagramme-de-cas-d-utilisation}
-   	\subsection{Diagramme de séquence}\label{subsec:diagramme-de-sequence}
-    \subsection{Diagramme d’activités}\label{subsec:diagramme-d-activites}
+
+    \chapter{État de l'art}\label{cha:etat-de-l-art}
+    \section{Présentation des principales applications existantes}\label{sec:definitions-et-concepts-cles}
+    \subsection{Types d'applications existantes}\label{subsec:types-d-applications-d-aide-a-la-deliberation}
+    \subsection{Avantages et inconvénients des applications existantes}\label{subsec:avantages-et-inconvenients-des-applications-existantes}
+    \subsection{Évaluation des fonctionnalités clés}\label{subsec:evaluation-des-fonctionnalites-cles}
+    \subsection{Comparaison des différentes applications}\label{subsec:comparaison-des-differentes-applications}
+    \subsection{Analyse des besoins de l'Université Nouveaux Horizons}\label{subsec:analyse-des-besoins-des-etudiants-de-l-universite-nouveaux-horizons}
+    \subsection{Identification des fonctionnalités clés pour répondre à ces besoins}\label{subsec:identification-des-fonctionnalites-cles-pour-repondre-a-ces-besoins}
+    \subsection{Justification des choix de fonctionnalités}\label{subsec:justification-des-choix-de-fonctionnalites-pour-votre-application}
+    \section{conclusion}\label{sec:conclusion}
+    \subsection{Synthèse des résultats de l'état de l'art}\label{subsec:synthese-des-resultats-de-l-etat-de-l-art}
+    \subsection{Limites et perspectives de l'état de l'art}\label{subsec:limites-et-perspectives-de-l-etat-de-l-art}
+    \subsection{Implications pour le développement de votre application}\label{subsec:implications-pour-le-developpement-de-votre-application}
     
-    \chapter{Conception}\label{sec:conception}
-    \subsection{Conception du système}\label{subsec:conception-du-systeme}
-    \subsection{Architecture du système}\label{subsec:architecture-du-systeme}
-    \subsection{Mise au point du plan de réutilisation}\label{subsec:mise-au-point-du-plan-de-reutilisation}
-    \subsection{Conception des classes système}\label{subsec:conception-des-classes-systeme}
+    \chapter{Conception de l'application}\label{cha:conception-de-l-application}
+    \section{Spécification des besoins fonctionnels et non fonctionnels}\label{sec:specification-des-besoins-fonctionnels-et-non-fonctionnels}
+    \section{Architecture logicielle et choix technologiques}\label{sec:architecture-logicielle-et-choix-technologiques}
+    \section{Conception de l'interface utilisateur}\label{sec:conception-de-l-interface-utilisateur}
+
+    \chapter{Réalisation de l'application}\label{cha:realisation-de-l-application}
+    \section{Élaboration des modules fonctionnels}\label{sec:elaboration-des-modules-fonctionnels}
+    \section{Intégration des modules}\label{sec:integration-des-modules}
+    \section{Tests et validation}\label{sec:tests-et-validation}
+
+    \chapter{Évaluation de l'application}\label{cha:evaluation-de-l-application}
+    \section{Évaluation de l'utilisabilité}\label{sec:evaluation-de-l-utilisabilite}
+    \section{Évaluation de l'efficacité de l'application}\label{sec:evaluation-de-l-efficacite-de-l-application}
+    \section{Propositions d'amélioration}\label{sec:propositions-d-amelioration}
+
+    \addcontentsline{toc}{chapter}{Conclusion générale}
+    \chapter*{Conclusion générale}\label{cha:conclusion-generale}
+    \section{Bilan du projet}\label{sec:bilan-du-projet}
+    \section{Apports et perspectives}\label{sec:apports-et-perspectives}
+    \section{Limites et recommandations}\label{sec:limites-et-recommandations}
     
-    \chapter{Implémentation}\label{sec:implementation}
-    \subsection{Introduction}\label{subsec:introduction-implementation}
-   	\subsection{Choix des outils}\label{subsec:choix-des-outils}
-   	\subsection{Présentation des résultats}\label{subsec:presentation-des-resultats}
-   	
-    \chapter{Conclusion}\label{sec:conclusion}
-    \chapter{Bibliographie}\label{sec:bibliographie}
 \end{document}
