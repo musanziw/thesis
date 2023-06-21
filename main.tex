@@ -8,6 +8,7 @@
 \usepackage{dirtytalk}
 \usepackage{subfiles}
 \usepackage{mathptmx}
+\usepackage{enumitem}
 \graphicspath{{images/}}
 \begin{document}
     \subfile{files/cover/cover-page}
@@ -20,7 +21,6 @@
 
     \addcontentsline{toc}{chapter}{Rémerciements}
     \chapter*{\uppercase{\large{\textmd{Rémerciements}} \vspace{0.6cm} \hrule}}\label{cha:remerciements}
-    
 
     \renewcommand*\contentsname{\uppercase{\large{\textmd{Table des matières}}} \vspace{0.5cm} \hrule }
     \tableofcontents
@@ -36,43 +36,33 @@
     \subfile{files/introduction/problematic.tex}
 
     \section{Etat de la question}\label{sec:etat-de-l-art}
+    \subfile{files/introduction/state-of-question.tex}
+
     \section{Objectifs}\label{sec:objectifs}
+    \subfile{files/introduction/goals.tex}
+
     \section{Méthodes et techniques}\label{sec:methode}
+    \subfile{files/introduction/methods-and-techniques.tex}
 
-
+    \chapter{Généralités}\label{cha:generalites}
+    \subfile{files/chapter-1/generalities.tex}
+    
     \chapter{État de l'art}\label{cha:etat-de-l-art}
+    \subfile{files/chapter-2/state-of-art.tex}
+
     \section{Présentation des principales applications existantes}\label{sec:definitions-et-concepts-cles}
-    \subsection{Types d'applications existantes}\label{subsec:types-d-applications-d-aide-a-la-deliberation}
-    \subsection{Avantages et inconvénients des applications existantes}\label{subsec:avantages-et-inconvenients-des-applications-existantes}
-    \subsection{Évaluation des fonctionnalités clés}\label{subsec:evaluation-des-fonctionnalites-cles}
-    \subsection{Comparaison des différentes applications}\label{subsec:comparaison-des-differentes-applications}
-    \subsection{Analyse des besoins de l'Université Nouveaux Horizons}\label{subsec:analyse-des-besoins-des-etudiants-de-l-universite-nouveaux-horizons}
-    \subsection{Identification des fonctionnalités clés pour répondre à ces besoins}\label{subsec:identification-des-fonctionnalites-cles-pour-repondre-a-ces-besoins}
-    \subsection{Justification des choix de fonctionnalités}\label{subsec:justification-des-choix-de-fonctionnalites-pour-votre-application}
+    \subfile{files/chapter-2/presentation-of-main-existing-applications.tex}
+
+    \subsection{Moodle}\label{subsec:moodle}
+    \subfile{files/chapter-2/moodle.tex}
+
+    \subsection{PowerSchool}\label{subsec:powerschool}
+    \subfile{files/chapter-2/powerschool.tex}
+
+    \subsection{Esis Salama}\label{subsec:esis-salamae}
+    \subfile{files/chapter-2/esis-salama.tex}
+
     \section{conclusion}\label{sec:conclusion}
-    \subsection{Synthèse des résultats de l'état de l'art}\label{subsec:synthese-des-resultats-de-l-etat-de-l-art}
-    \subsection{Limites et perspectives de l'état de l'art}\label{subsec:limites-et-perspectives-de-l-etat-de-l-art}
-    \subsection{Implications pour le développement de votre application}\label{subsec:implications-pour-le-developpement-de-votre-application}
-    
-    \chapter{Conception de l'application}\label{cha:conception-de-l-application}
-    \section{Spécification des besoins fonctionnels et non fonctionnels}\label{sec:specification-des-besoins-fonctionnels-et-non-fonctionnels}
-    \section{Architecture logicielle et choix technologiques}\label{sec:architecture-logicielle-et-choix-technologiques}
-    \section{Conception de l'interface utilisateur}\label{sec:conception-de-l-interface-utilisateur}
+    \subfile{files/chapter-2/conclusion.tex}
 
-    \chapter{Réalisation de l'application}\label{cha:realisation-de-l-application}
-    \section{Élaboration des modules fonctionnels}\label{sec:elaboration-des-modules-fonctionnels}
-    \section{Intégration des modules}\label{sec:integration-des-modules}
-    \section{Tests et validation}\label{sec:tests-et-validation}
-
-    \chapter{Évaluation de l'application}\label{cha:evaluation-de-l-application}
-    \section{Évaluation de l'utilisabilité}\label{sec:evaluation-de-l-utilisabilite}
-    \section{Évaluation de l'efficacité de l'application}\label{sec:evaluation-de-l-efficacite-de-l-application}
-    \section{Propositions d'amélioration}\label{sec:propositions-d-amelioration}
-
-    \addcontentsline{toc}{chapter}{Conclusion générale}
-    \chapter*{Conclusion générale}\label{cha:conclusion-generale}
-    \section{Bilan du projet}\label{sec:bilan-du-projet}
-    \section{Apports et perspectives}\label{sec:apports-et-perspectives}
-    \section{Limites et recommandations}\label{sec:limites-et-recommandations}
-    
 \end{document}
