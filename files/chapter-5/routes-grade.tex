@@ -1,17 +1,10 @@
 Préfixe des routes :
-\begin{lstlisting}
+
     localhost:3000/grades
-\end{lstlisting}
+
 
 \begin{center}
-    \begin{tabularx}{1\textwidth} {
-            | >{\raggedright\arraybackslash}X
-            | >{\centering\arraybackslash}X
-            | >{\centering\arraybackslash}X
-            | >{\centering\arraybackslash}X
-            | >{\centering\arraybackslash}X
-            | >{\raggedleft\arraybackslash}X |
-        }
+    \begin{tabular}[ht]{|c|c|c|c|c|c|}
         \hline
             Méthodes & Actions & Routes & Paramètres & Corps de la requête & Réponses \\
         \hline
@@ -25,6 +18,6 @@ Préfixe des routes :
         \hline
             DELETE & Supprimer  & /:id & \{ id \} & - & \{ status, message \} \\
         \hline
-    \end{tabularx}
+    \end{tabular}
 \end{center}
 \pagebreak

@@ -1,17 +1,9 @@
 Préfixe des routes :
-\begin{lstlisting}
-    localhost:3000/deliberations
-\end{lstlisting}
+localhost:3000/deliberations
+
 
 \begin{center}
-    \begin{tabularx}{1\textwidth} {
-            | >{\raggedright\arraybackslash}X
-            | >{\centering\arraybackslash}X
-            | >{\centering\arraybackslash}X
-            | >{\centering\arraybackslash}X
-            | >{\centering\arraybackslash}X
-            | >{\raggedleft\arraybackslash}X |
-        }
+    \begin{tabular}[ht]{|c|c|c|c|c|c|}
         \hline
             Méthodes & Actions & Routes & Paramètres & Corps de la requête & Réponses \\
         \hline
@@ -21,6 +13,6 @@ Préfixe des routes :
         \hline
             GET  & Lire & send-reports/:id &  \{ id \} & - & \{ status, message \} \\
         \hline
-    \end{tabularx}
+    \end{tabular}
 \end{center}
 \pagebreak
