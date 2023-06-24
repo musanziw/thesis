@@ -1,0 +1,27 @@
+Préfixe des routes :
+\begin{lstlisting}
+    localhost:3000/auth
+\end{lstlisting}
+
+\begin{center}
+    \begin{tabularx}{1\textwidth} {
+        | >{\raggedright\arraybackslash}X
+        | >{\centering\arraybackslash}X
+        | >{\centering\arraybackslash}X
+        | >{\centering\arraybackslash}X
+        | >{\raggedleft\arraybackslash}X | }
+        \hline
+            Méthodes & Routes & Paramètres & Corps de la requête & Réponses \\
+        \hline
+            POST  & /login & - & \{ email, mot de passe \}  & \{ jeton \} \\
+        \hline
+            GET  & /profile & - & - &  utilisateur : \{ id, nom, email, mot de passe, est\_actif \}  \\
+        \hline
+            PATCH  & /profile & - & \{ nom, email \} & \{ status, message \} \\
+        \hline
+            PATCH  & /update-password & - & \{ Ancien mot de passe, nouveau mot de passe \} & \{ status, message \} \\
+        \hline
+    \end{tabularx}
+\end{center}
+\pagebreak
+

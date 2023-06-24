@@ -1,0 +1,30 @@
+Préfixe des routes :
+\begin{lstlisting}
+    localhost:3000/users
+\end{lstlisting}
+
+\begin{center}
+    \begin{tabularx}{1\textwidth} {
+            | >{\raggedright\arraybackslash}X
+            | >{\centering\arraybackslash}X
+            | >{\centering\arraybackslash}X
+            | >{\centering\arraybackslash}X
+            | >{\centering\arraybackslash}X
+            | >{\raggedleft\arraybackslash}X |
+        }
+        \hline
+            Méthodes & Actions & Routes & Paramètres & Corps de la requête & Réponses \\
+        \hline
+            POST  & Créer & / &  - & \{ nom, email, roles[] \} & \{ status, message \} \\
+        \hline
+            GET  & Lire &  / & - & - & r\^oles[] : \{ id, nom, email, roles[] \}  \\
+        \hline
+            GET  & Lire & /:id & \{ id \} & - & utilisateur : \{ id, nom, email, roles[] \} \\
+        \hline
+            PATCH  & Modifier & /:id & \{ id \} & \{ nom, email, roles[] \} & \{ status, message \} \\
+        \hline
+            DELETE & Supprimer  & /:id & \{ id \} & - & \{ status, message \} \\
+        \hline
+    \end{tabularx}
+\end{center}
+\pagebreak

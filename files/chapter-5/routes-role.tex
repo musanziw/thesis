@@ -1,0 +1,29 @@
+Préfixe des routes :
+\begin{lstlisting}
+    localhost:3000/roles
+\end{lstlisting}
+
+\begin{center}
+    \begin{tabularx}{1\textwidth} {
+            | >{\raggedright\arraybackslash}X
+            | >{\centering\arraybackslash}X
+            | >{\centering\arraybackslash}X
+            | >{\centering\arraybackslash}X
+            | >{\centering\arraybackslash}X
+            | >{\raggedleft\arraybackslash}X |
+        }
+        \hline
+            Méthodes & Actions & Routes & Paramètres & Corps de la requête & Réponses \\
+        \hline
+            POST  & Créer & / &  - & \{ nom \} & \{ status, message \} \\
+        \hline
+            GET  & Lire &  / & - & - & r\^oles[] : \{ id, nom \}  \\
+        \hline
+            GET  & Lire & /:id & \{ id \} & - &  r\^oles: \{ id, nom \} \\
+        \hline
+            PATCH  & Modifier & /:id & \{ id \} & \{ nom \} & \{ status, message \} \\
+        \hline
+            DELETE & Supprimer  & /:id & \{ id \} & - & \{ status, message \} \\
+        \hline
+    \end{tabularx}
+\end{center}

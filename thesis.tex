@@ -1,0 +1,40 @@
+\documentclass[
+		oneside,numbers=noenddot,headinclude,
+	 	footinclude=true,cleardoublepage=empty,
+		dottedtoc,paper=a4,fontsize=12pt,
+]{scrreprt}
+\input{thesis-config}
+\graphicspath{{gfx/}}
+\begin{document}
+    \setcounter{chapter}{-1}
+    \subfile{files/cover/cover-page}
+
+    \addcontentsline{toc}{chapter}{Résumé}
+    \chapter*{Résumé}\label{cha:resume}
+
+    \addcontentsline{toc}{chapter}{Abstract}
+    \chapter*{Abstract}\label{cha:abstract}
+
+    \addcontentsline{toc}{chapter}{Rémerciements}
+    \chapter*{Rémerciements}\label{cha:remerciements}
+
+    \tableofcontents
+
+    \listoffigures
+
+    \chapter{Introduction générale}\label{cha:introduction-generale}
+    \subfile{files/introduction/introduction}
+
+    \chapter{Généralités}\label{cha:generalites}
+    \subfile{files/chapter-1/generalities.tex}
+
+    \chapter{État de l'art}\label{cha:etat-de-l-art}
+    \subfile{files/chapter-2/state-of-art.tex}
+
+    \chapter{Conception}\label{sec:conception}
+    \subfile{files/chapter-3/conception.tex}
+
+    \chapter{Présentation des résultats}\label{cha:presentation-des-resultats}
+    \subfile{files/chapter-5/api-presentation.tex}
+
+\end{document}
