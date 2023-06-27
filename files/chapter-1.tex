@@ -1,3 +1,6 @@
+Dans cette partie du travail, nous allons définir quelques termes utiles qui seront utilisés dans ce document
+pour une meilleure compréhension de ce dernier.
+
 \section{La délibération}\label{sec:deliberation}
 % https://fr.wikipedia.org/wiki/D%C3%A9lib%C3%A9ration
 La délibération est une confrontation de vue
@@ -591,14 +594,60 @@ Netflix, Amazon Web Services, Groupon, Vivaldi, SAP, LinkedIn, Microsoft, Yahoo!
 Walmart, Rakuten, Sage et PayPal.
 
 \section{Une base des données}\label{sec:base-de-donnees}
-Une base de données est une collection organisée de données qui sont stockées de manière à
-permettre un accès facile et efficace, ainsi que des opérations de gestion de données.
-Elle est utilisée pour stocker et organiser des informations pour une utilisation ultérieure.
+% https://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es
+Une base de données permet de stocker et de retrouver des données structurées,
+semi-structurées ou des données brutes ou de l'information, souvent en
+rapport avec un thème ou une activité; celles-ci peuvent être de
+natures différentes et plus ou moins reliées entre elles.
 
-Dans le contexte du développement logiciel, une base de données est souvent utilisée pour
-stocker les données de l'application, telles que les informations utilisateur, les commandes,
-les messages, les transactions, etc. Elle permet également aux développeurs d'accéder facilement à
-ces données, de les organiser et de les manipuler à l'aide de requêtes SQL (Structured Query Language),
-qui est le langage de programmation standard pour interagir avec les bases de données relationnelles.
+Leurs données peuvent être stockées sous une forme très structurée
+(base de données relationnelles par exemple), ou bien sous la forme de données brutes
+peu structurées (avec les bases de données NoSQL par exemple). Une base de données peut
+être localisée dans un même lieu et sur un même support informatisé, ou répartie sur
+plusieurs machines à plusieurs endroits.
 
-\subsection{Bases de données relationnelles}\label{subsec:relational-databases}
+La base de données est au centre des dispositifs informatiques de collecte, mise en forme,
+stockage et utilisation d'informations. Le dispositif comporte un système de gestion de
+base de données (abréviation : SGBD) : un logiciel moteur qui manipule la base de données et
+dirige l'accès à son contenu. De tels dispositifs comportent également des logiciels applicatifs, et
+un ensemble de règles relatives à l'accès et l'utilisation des informations.
+
+Lorsque plusieurs objets nommés « bases de données » sont constitués sous forme de collection,
+on parle alors d'une banque de données.
+
+Il existe plusieurs types de bases de données comme les bases des données en mémoire, les plus courantes sont les bases de données
+relationnelles et les bases de données NoSQL.
+
+\subsection{Les bases de données relationnelles}\label{subsec:base-de-donnees-relationnelles}
+% https://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle
+Une base de données relationnelle est une base de données où l'information est
+organisée dans des tableaux à deux dimensions appelés des relations ou tables, selon
+le modèle introduit par Edgar F. Codd en 1960. Selon ce modèle relationnel, une base de
+données consiste en une ou plusieurs relations. Les lignes de ces relations sont appelées
+des nuplets ou enregistrements. Les colonnes sont appelées des attributs.
+
+Les logiciels qui permettent de créer, utiliser et maintenir des bases de données relationnelles
+sont des systèmes de gestion de bases de données relationnelles (SGBDR).
+
+Pratiquement tous les systèmes relationnels utilisent le langage SQL pour interroger les bases de
+données. Ce langage permet de demander des opérations d'algèbre relationnelle telles que l'intersection,
+la sélection et la jointure.
+
+\subsection{Les bases de données NoSQL}\label{subsec:base-de-donnees-nosql}
+% https://fr.wikipedia.org/wiki/NoSQL
+NoSQL désigne une famille de systèmes de gestion de base de données (SGBD) qui s'écarte
+du paradigme classique des bases relationnelles. L'explicitation la plus populaire de
+l'acronyme est Not only SQL (« pas seulement SQL » en anglais) même si cette
+interprétation peut être discutée.
+
+La définition exacte de la famille des SGBD NoSQL reste sujette à débat.
+Le terme se rattache autant à des caractéristiques techniques qu'à une génération
+historique de SGBD qui a émergé autour des années 20102. D'après Pramod J. Sadalage et Martin Fowler,
+la raison principale de l'émergence et de l'adoption des SGBD NoSQL serait le développement des
+centres de données et la nécessité de posséder un paradigme de bases de données adapté à ce modèle
+d'infrastructure matérielle.
+
+L'architecture machine en clusters induit une structure logicielle distribuée fonctionnant
+avec des agrégats répartis sur différents serveurs permettant des accès et modifications
+concurrentes mais imposant également de remettre en cause de nombreux fondements de
+l'architecture SGBD relationnelle traditionnelle, notamment les propriétés ACID.
