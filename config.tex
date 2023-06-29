@@ -6,13 +6,19 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{subfiles}
+\usepackage{listings}
+% \usepackage{booktabs}
+\usepackage{multirow}
 \usepackage[a4paper, margin=2cm]{geometry}
-% \usepackage[osf]{libertine}
+\usepackage{xcolor}
+\usepackage[osf]{libertine}
 \usepackage{scrlayer-scrpage}
-\pagestyle{scrheadings}
 \KOMAoptions{singlespacing=true}
 \graphicspath{{gfx/}}
 \linespread{1.2}
 \titleformat{\chapter}[display]
 {\relax}{\vspace*{-3\baselineskip}\makebox[\linewidth][r]{\color{halfgray}\chapterNumber\thechapter}}{0pt}%
 {\raggedright\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.5}
