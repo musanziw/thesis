@@ -1,0 +1,208 @@
+\section{Présentation de l'API Rest}\label{sec:presentation-de-l-api}
+L'API comporte 44 routes au total que nous avons catégorisées en 9 groupes
+selon la ressource qu'elles manipulent ou leurs t\^aches.
+
+\subsection{Les routes de l'authentification}\label{subsec:routes-auth}
+
+\begin{table}[ht]
+  \centering
+  \caption{Tableau des routes de l'authentification}
+  \label{tab:routes-auth}
+  \begin{tabular}{|p{2.5cm}|p{1cm}|p{3.5cm}|p{4cm}|}
+    \hline
+    Méthode  & Params & Corps & Réponses \\
+    \hline
+        POST   /login & - & \{ email, mot de passe \}  & \{ jeton \} \\
+    \hline
+        GET  /profile & - & - &  utilisateur: \{ id, nom, email, mot de passe, est\_actif \}  \\
+    \hline
+        PATCH /profile & - & \{ nom, email \} & \{ status, message \} \\
+    \hline
+        PATCH /update-password & - & \{ Ancien mot de passe, nouveau mot de passe \} & \{ status, message \} \\
+    \hline
+  \end{tabular}
+\end{table}
+\pagebreak
+
+\subsection{Les routes de la gestion des facultés}\label{subsec:routes-fac}
+
+\begin{table}[ht]
+  \caption{Tableau des routes de la gestion des facultés}
+  \label{tab:routes-fac}
+  \begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{4cm}|}
+    \hline
+          Méthode & Action & Params & Corps & Réponse \\
+      \hline
+          POST /  & Créer &  - & \{ nom \} & \{ status, message \} \\
+      \hline
+          GET  / & Lire  & - & - & facultés[] : \{ id, nom \}  \\
+      \hline
+          GET /:id  & Lire  & \{ id \} & - & facultés : \{ id, nom \}  \\
+      \hline
+          PATCH  /:id  & Modifier & \{ id \} & \{ nom \} & \{ status, message \} \\
+      \hline
+          DELETE  /:id  & Supprimer & \{ id \} & - & \{ status, message \} \\
+      \hline
+  \end{tabular}
+\end{table}
+\pagebreak
+
+\subsection{Les routes de la gestion des filières}\label{subsec:routes-field}
+
+\begin{table}[ht]
+  \caption{Tableau des routes de la gestion des filières}
+  \label{tab:routes-field}
+  \begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{2.5cm}|p{3cm}|}
+    \hline
+      Méthode & Action & Params & Corps & Réponse \\
+    \hline
+        POST / & Créer &  - & \{ nom, faculté \} & \{ status, message \} \\
+    \hline
+        GET / & Lire & - & - & filières[] : \{ id, nom, faculté \}  \\
+    \hline
+        GET /:id & Lire & \{ id \} & - & filière: \{ id, nom, faculté \} \\
+    \hline
+        PATCH /:id & Modifier & \{ id \} & \{ nom, faculté \} & \{ status, message \} \\
+    \hline
+        DELETE /:id & Supprimer & \{ id \} & - & \{ status, message \} \\
+    \hline
+  \end{tabular}
+\end{table}
+\pagebreak
+
+\subsection{Les routes de la gestion des cours}\label{subsec:routes-course}
+
+\begin{table}[ht]
+  \caption{Tableau des routes de la gestion des cours}
+  \label{tab:routes-course}
+  \begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{2.5cm}|p{3cm}|}
+    \hline
+      Méthode & Action & Params & Corps & Réponse \\
+    \hline
+      POST / & Créer &  - &  \{ nom, heures, crédits, promotion, enseignant, filière \} & \{ status, message \} \\
+    \hline
+        GET /  & Lire & - & - & cours[] :  \{ id, nom, heures, crédits, promotion, enseignant, filière \} \\
+    \hline
+        GET /:id & Lire & \{ id \} & - & cours: \{ id, nom, heures, crédits, promotion, enseignant, filière \} \\
+    \hline
+        PATCH /:id & Modifier  & \{ id \} &  \{ nom, heures, crédits, promotion, enseignant, filière \} & \{ status, message \} \\
+    \hline
+        DELETE /:id & Supprimer & \{ id \} & - & \{ status, message \} \\
+    \hline
+  \end{tabular}
+\end{table}
+\pagebreak
+
+\subsection{Les routes de la gestion des étudiants}\label{subsec:routes-student}
+
+\begin{table}[ht]
+  \caption{Tableau des routes de la gestion des étudiants}
+  \label{tab:routes-student}
+  \begin{tabular}{|p{1.5cm}|p{1cm}|p{2cm}|p{3cm}|p{3cm}| }
+    \hline
+    Méthode & Route & Paramètre & Corps & Réponses \\
+    \hline
+    GET & / & - & - & \{ étudiants[] \} \\
+    \hline
+    GET & /:id & \{ id \} & - & étudiant : \{ id, nom, matricule, email, filière, cours[] \} \\
+    \hline
+    POST & / & - & \{ nom, matricule, email, filière \} & \{ status, message \} \\
+    \hline
+    PATCH & /:id & \{ id \} & \{ nom, matricule, email, filière \} & \{ status, message \} \\
+    \hline
+    DELETE & /:id & \{ id \} & - & \{ status, message \} \\
+    \hline
+    GET fields/:fieldId/promotions/promotionId & Lire & \{ fieldId, promotionId \} & - &  étudiants[] : \{ id, nom, email, matricule, filière, promotion \} \\
+    \hline
+    GET courses/:coursID & Lire & \{ coursId \} & - &  étudiants[] : \{ id, nom, email, matricule, promotion, compléments \} \\
+    \hline
+  \end{tabular}
+\end{table}
+\pagebreak
+
+\subsection{Les routes de la gestion des cotes}\label{subsec:routes-grade}
+
+\begin{table}[ht]
+  \caption{Tableau des routes de la gestion des cotes}
+  \label{tab:routes-grade}
+  \begin{tabular}{|p{1.5cm}|p{1cm}|p{1cm}|p{3cm}|p{4cm}| }
+    \hline
+    Méthode & Route & Params & Corps & Réponses \\
+    \hline
+        POST /  & Créer &  - &\{ moyenne, moyenne\_eg, session, promotion\_etudiant, cours, étudiant \} & \{ status, message \} \\
+    \hline
+        GET  / & Lire & - & - & cotes[] :  \{ id, moyenne, moyenne\_eg, session, promotion\_etudiant, cours, étudiant \} \\
+    \hline
+        GET  /:id  & Lire & \{ id \} & - & cote: \{id, moyenne, moyenne\_eg, session, promotion\_etudiant, cours, étudiant \} \\
+    \hline
+        PATCH /:id  & Modifier & \{ id \} & \{ id, moyenne, moyenne\_eg, session, promotion\_etudiant, cours, étudiant \} & \{ status, message \} \\
+    \hline
+        DELETE  /:id & Supprimer  & \{ id \} & - & \{ status, message \} \\
+    \hline
+  \end{tabular}
+\end{table}
+\pagebreak
+
+\subsection{Les routes de la gestion des délibérations}\label{subsec:routes-deliberation}
+
+\begin{table}[ht]
+  \caption{Tableau des routes de la gestion des délibérations}
+  \label{tab:routes-deliberation}
+  \begin{tabular}{|p{2cm}|p{1cm}|p{1cm}|p{1.5cm}|p{4cm}| }
+    \hline
+    Méthode & Route & Params & Corps & Réponses \\
+    \hline
+    GET /:id & Lire &  \{ id \} & - & \{ nom, matricule, email, filière, cours[] \} \\
+    \hline
+    GET generate-reports/:id  & Lire &  \{ id \} & - & \{ status, message \} \\
+    \hline
+    GET send-reports/:id & Lire &  \{ id \} & - & \{ status, message \} \\
+    \hline
+  \end{tabular}
+\end{table}
+\pagebreak
+
+\subsection{Les routes de la gestion des utilisateurs}\label{subsec:routes-user}
+
+\begin{table}[ht]
+  \caption{Tableau des routes de la gestion des utilisateurs}
+  \label{tab:routes-user}
+  \begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1cm}|p{2.5cm}|p{3.5cm}| }
+    \hline
+    Méthode & Route & Params & Corps & Réponses \\
+    \hline
+    GET / & Lire & - & - & utilisateurs[] :  \{ id, nom, email, mot de passe, est\_actif, r\^oles[] \} \\
+    \hline
+    GET /:id & Lire & \{ id \} & - & utilisateur : \{ id, nom, email, mot de passe, est\_actif, r\^oles[] \} \\
+    \hline
+    POST / & Créer & - & \{ nom, email, r\^oles[] \} & \{ status, message \} \\
+    \hline
+    PATCH /:id & Modifier & \{ id \} & \{ nom, email, r\^oles[] \} & \{ status, message \} \\
+    \hline
+    DELETE /:id & Supprimer & \{ id \} & - & \{ status, message \} \\
+    \hline
+  \end{tabular}
+\end{table}
+\pagebreak
+
+\subsection{Les routes de la gestion des rôles}\label{subsec:routes-role}
+
+\begin{table}[ht]
+  \caption{Tableau des routes de la gestion des rôles}
+  \label{tab:routes-role}
+  \begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1cm}|p{2.5cm}|p{3.5cm}| }
+    \hline
+    Méthode & Route & Params & Corps & Réponses \\
+    \hline
+    GET / & Lire & - & - & rôles[] :  \{ id, nom \} \\
+    \hline
+    GET /:id & Lire & \{ id \} & - & rôle : \{ id, nom \} \\
+    \hline
+    POST / & Créer & - & \{ nom \} & \{ status, message \} \\
+    \hline
+    PATCH /:id & Modifier & \{ id \} & \{ nom \} & \{ status, message \} \\
+    \hline
+    DELETE /:id & Supprimer & \{ id \} & - & \{ status, message \} \\
+    \hline
+  \end{tabular}
+\end{table}
