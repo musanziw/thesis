@@ -9,14 +9,17 @@
     \setcounter{chapter}{-1}
     \subfile{files/cover-page}
 
+    \addcontentsline{toc}{chapter}{Rémerciements}
+    \chapter*{Rémerciements}\label{cha:remerciements}
+    \subfile{files/thanks}
+
     \addcontentsline{toc}{chapter}{Résumé}
     \chapter*{Résumé}\label{cha:resume}
+    \subfile{files/resume}
 
     \addcontentsline{toc}{chapter}{Abstract}
     \chapter*{Abstract}\label{cha:abstract}
-
-    \addcontentsline{toc}{chapter}{Rémerciements}
-    \chapter*{Rémerciements}\label{cha:remerciements}
+    \subfile{files/abstract}
 
     \tableofcontents
 
@@ -38,6 +41,10 @@
 
     \chapter{Présentation des résultats}\label{cha:presentation-des-resultats}
     \subfile{files/chapter-4}
+
+    \addcontentsline{toc}{chapter}{Conclusion}
+    \chapter*{Conclusion}\label{cha:conlusion}
+    \subfile{files/conclusion}
 
     \printbibliography
 \end{document}
