@@ -7,10 +7,21 @@
 \input{config}
 \begin{document}
     \setcounter{chapter}{-1}
-    \subfile{files/cover-page}
+    \subfile{files/cover-page-1}
+
+    \newpage
+    \subfile{files/cover-page-2}
+
+    \addcontentsline{toc}{chapter}{épigraphe}
+    \chapter*{\capitalisewords{épigraphe}}\label{cha:epigraph}
+    \subfile{files/epigraph}
+
+    \addcontentsline{toc}{chapter}{dépigraphe}
+    \chapter*{\capitalisewords{dédicace}}\label{cha:ddck}
+    \subfile{files/dedicace}
 
     \addcontentsline{toc}{chapter}{Rémerciements}
-    \chapter*{Rémerciements}\label{cha:remerciements}
+    \chapter*{Rémerciementsssss}\label{cha:remerciements}
     \subfile{files/thanks}
 
     \addcontentsline{toc}{chapter}{Résumé}
@@ -31,15 +42,15 @@
     \subfile{files/chapter-0}
 
     \chapter{Généralités}\label{cha:generalites}
-    \subfile{files/chapter-1}
+    \subfile{files/chapitre-1}
 
-    \chapter{État de l'art}\label{cha:etat-de-l-art}
+    \chapter{Cadre du travail}
     \subfile{files/chapter-2}
 
-    \chapter{Conception}\label{sec:conception}
+    \chapter{Analyse}\label{sec:conception}
     \subfile{files/chapter-3}
 
-    \chapter{Présentation des résultats}\label{cha:presentation-des-resultats}
+    \chapter{Implémentation}\label{cha:presentation-des-resultats}
     \subfile{files/chapter-4}
 
     \addcontentsline{toc}{chapter}{Conclusion}
